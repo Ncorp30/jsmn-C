@@ -15,7 +15,7 @@ static inline void *realloc_it(void *ptrmem, size_t size) {
   void *p = realloc(ptrmem, size);
   if (!p) {
     free(ptrmem);
-    fprintf(stderr, "realloc(): errno=%d\n", errno);
+    fprintf(stderr, "realloc() failed\n");
   }
   return p;
 }
